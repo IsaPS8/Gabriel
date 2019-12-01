@@ -314,3 +314,80 @@ public class GerenciaBib{       //Gerenciador da Biblioteca (Atividade)
              }
         }    
 }
+        public abstract class Emprestimo{
+            private String Nome;
+            private String NomeLivro;
+            private String Autor;
+            private int CPF;
+            
+            public String getNome(){
+                return this.Nome;
+            }
+
+            public void setNome(String Nome){
+                this.Nome = Nome;
+            }
+
+            public String getNomeLivro(){
+                return this.NomeLivro;
+            }
+
+            public void setNomeLivro(String NomeLivro){
+                this.NomeLivro = NomeLivro;
+            }
+
+            public String getAutor(){
+                return this.Autor;
+            }
+
+            public void setAutor(String Autor){
+                this.Autor = Autor;
+            }
+
+            public int getCPF(){
+                return this.CPF;
+            }
+
+            public void setCPF(int CPF){
+                this.CPF = CPF;
+            }
+        
+        public Emprestimo(String Nome, String NomeLivro, String Autor, int CPF){
+            this.Nome = null;
+            this.NomeLivro = null;
+            this.Autor = null;
+            this.CPF = 0;
+            }
+        }
+
+        public class Data{      //Classe de devolução de livros, juntamente com a data
+        public String Date(){
+            return new SimpleDateFormat("DD/MM/YYYY").format(new Data(0, 0));
+            }
+
+             private int DataEmp;
+             private int DataDev;
+
+             public int getDataEmp(){
+             return this.DataEmp;
+             }
+
+             public void setDataEmp(int DataEmp){
+             this.DataEmp = DataEmp;
+             }
+
+             public int getDataDev(){
+             return this.DataDev;
+             }
+
+             public void setDataDev(int DataDev){
+             this.DataDev = DataDev;
+             }
+
+             public Data(int DataEmp, int DataDev){
+             this.DataEmp = 0;
+             this.DataDev = 0;
+             }
+        }
+    
+}
